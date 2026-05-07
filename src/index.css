@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #f5f5f7;
+  --color-brand-header: #fbfbfd;
+  --color-brand-text: #534841;
+  --color-brand-accent: #009f4d;
+  --color-brand-orange: #ff5d01;
+  --font-sans: "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Helvetica Neue", Arial, sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: var(--color-brand-bg);
+  color: var(--color-brand-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hide scrollbar for a cleaner look in certain components if needed */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
