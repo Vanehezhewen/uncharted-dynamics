@@ -259,7 +259,7 @@ const Hero = () => {
             }}
             className="font-montserrat font-normal text-lg leading-relaxed opacity-80 max-w-[70vw] md:max-w-[45vw]"
           >
-            believes intelligence is shaped by interaction with the physical world.
+            We believe intelligence is shaped by interaction with the physical world.
             To build machines that truly understand reality, AI must learn physics as a first principle.
             We are building the infrastructure for that future.
           </motion.p>
