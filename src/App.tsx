@@ -593,12 +593,6 @@ const Footer = () => (
           href="#"
           className="hover:text-brand-accent transition-colors opacity-80"
         >
-          SDK Documentation
-        </a>
-        <a
-          href="#"
-          className="hover:text-brand-accent transition-colors opacity-80"
-        >
           Privacy Policy
         </a>
         <a
