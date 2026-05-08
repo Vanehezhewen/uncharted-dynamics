@@ -569,8 +569,7 @@ const Footer = () => (
         />
       </a>
       <p className="text-sm opacity-60 leading-relaxed font-montserrat">
-        Enabling every intelligent agent to truly understand and interact with
-        the physical world.
+        Physics first. Intelligence next. Action follows.
       </p>
     </div>
 
@@ -583,7 +582,7 @@ const Footer = () => (
           href="mailto:info@uncharted-dynamics.com"
           className="hover:text-brand-accent transition-colors font-semibold"
         >
-          info@uncharted-dynamics.com
+          tech@uncharteddynamics.ai
         </a>
       </div>
       <div className="flex flex-col gap-4 text-sm">
