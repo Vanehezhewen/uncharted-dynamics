@@ -448,7 +448,8 @@ const CaseStudies = () => (
     <div className="relative z-10 max-w-7xl mx-auto">
       <div className="mb-16 flex flex-col items-center text-center">
         <h2 className="text-[2.5rem] sm:text-[3.5rem] leading-[0.95] font-medium tracking-[-0.03em] mb-4">
-          Case Studies
+          Where the Physics Gets <br />
+          <span className="text-brand-orange">Complex</span>
         </h2>
         <p className="text-lg opacity-70 max-w-xl">
           What becomes possible across robotic domains.
@@ -509,7 +510,7 @@ const BuildOnFirstPrinciples = () => (
             body: "Existing solvers make tradeoffs that work for rendering and games — speed over accuracy, approximation over consistency. For robotics, those tradeoffs compound. A policy trained on physically inconsistent data fails in the real world. We built from the ground up because patching existing engines couldn't close that gap.",
           },
           {
-            title: "The Tradeoffs We Made",
+            title: "The Trade-offs We Made",
             body: "We chose fidelity over speed where it matters — in contact resolution, deformation modeling, and friction computation. That means our solver is not the fastest, but it is the most physically consistent in the scenarios that break other engines. That's a deliberate choice, not a limitation.",
           },
           {
