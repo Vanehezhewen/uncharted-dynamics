@@ -439,6 +439,7 @@ const HowItWorks = () => (
   </section>
 );
 
+
 const CaseStudies = () => (
   <section
     id="ecosystem"
@@ -489,6 +490,7 @@ const CaseStudies = () => (
   </section>
 );
 
+/*
 const FAQ = () => (
   <section className="py-32 px-6 xl:px-[150px] bg-[#f5f5f7]">
     <div className="max-w-4xl mx-auto w-full">
@@ -542,6 +544,7 @@ const FAQ = () => (
     </div>
   </section>
 );
+*/
 
 const FinalCTA = () => (
   <section className="py-32 px-6 xl:px-[150px] bg-brand-accent text-white text-center flex flex-col items-center">
