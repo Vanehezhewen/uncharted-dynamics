@@ -244,8 +244,8 @@ const Hero = () => {
             }}
             className="text-[2.7rem] sm:text-[3.5rem] md:text-[4.5rem] leading-[1.05] font-medium tracking-[-0.03em]"
           >
-            The Infrastructure Powering <br className="hidden lg:block" />
-            <span className="text-brand-accent">Physical Intelligence</span>
+            Where AI Meets the Physical World <br className="hidden lg:block" />
+            <span className="text-brand-accent">At Scale</span>
           </motion.h1>
 
           <motion.p
