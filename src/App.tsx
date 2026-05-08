@@ -623,7 +623,7 @@ export default function App() {
         <CoreBenefits />
         <HowItWorks />
         <CaseStudies />
-        <FAQ />
+        <BuildOnFirstPrinciples/>
         <FinalCTA />
       </main>
       <Footer />
