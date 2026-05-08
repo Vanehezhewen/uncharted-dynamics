@@ -346,21 +346,21 @@ const CoreBenefits = () => (
       <Metric
         value="<10%"
         label="Industrial-Grade Accuracy"
-        desc="Proprietary hybrid solver delivering <10% force and friction error."
+        desc="Force and friction error within tolerances real deployments demand."
         delay={0.1}
       />
       <div className="hidden md:block w-[1px] h-32 bg-brand-text/15 mt-4" />
       <Metric
         value="10×"
         label="Accelerated Development"
-        desc="Shorten the cycle from concept to deployment by 75%."
+        desc="From concept to deployment, in a fraction of the time."
         delay={0.2}
       />
       <div className="hidden md:block w-[1px] h-32 bg-brand-text/15 mt-4" />
       <Metric
         value="1/10"
         label="Development Cost"
-        desc="Dramatically reduce the high cost of manual data collection and re-tuning."
+        desc="Less time re-tuning. Less spent on manual data collection."
         delay={0.3}
       />
     </div>
