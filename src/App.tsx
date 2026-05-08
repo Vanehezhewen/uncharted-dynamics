@@ -304,7 +304,7 @@ const SocialProof = () => (
       className="text-xl sm:text-2xl lg:text-3xl font-medium tracking-tight max-w-4xl"
     >
       Built for{" "}
-      <span className="text-brand-accent">8scalable Sim2Real transfer</span>in the world's most complex physical environments.
+      <span className="text-brand-accent">scalable Sim2Real transfer</span> in the world's most complex physical environments.
     </motion.h3>
   </section>
 );
