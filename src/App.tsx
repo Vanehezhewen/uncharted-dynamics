@@ -162,10 +162,9 @@ const Nav = () => (
       </div>
     </a>
     <div className="hidden md:flex items-center gap-10 lg:gap-16">
-      <NavLink href="#products">Products</NavLink>
-      <NavLink href="#technology">Technology</NavLink>
-      <NavLink href="#data-services">Data Services</NavLink>
-      <NavLink href="#ecosystem">Ecosystem</NavLink>
+      <NavLink href="#technology">Products</NavLink>
+      <NavLink href="#ecosystem">Scope</NavLink>
+      <NavLink href="#manifesto">Manifesto</NavLink>
       <a
         href="#contact"
         className="ml-4 text-[10px] uppercase font-bold tracking-[0.1em] px-4 py-2 border border-brand-text/20 rounded-full hover:bg-brand-text hover:text-white transition-colors"
@@ -493,7 +492,9 @@ const CaseStudies = () => (
 
 
 const BuildOnFirstPrinciples = () => (
-  <section className="py-32 px-6 xl:px-[150px] bg-[#f5f5f7]">
+  <section 
+      id="manifesto"
+      className="py-32 px-6 xl:px-[150px] bg-[#f5f5f7]">
     <div className="max-w-4xl mx-auto w-full">
       <div className="mb-16">
         <h2 className="text-[2.5rem] sm:text-[3.5rem] leading-[0.95] font-medium tracking-[-0.03em] mb-4">
