@@ -294,7 +294,7 @@ const SocialProof = () => (
       viewport={{ once: true }}
       className="text-xs sm:text-sm font-semibold tracking-widest uppercase opacity-60 mb-6"
     >
-      Trusted by AI Firms, Robot Manufacturers, and Research Collaborators
+      Powering the next generation of physical intelligence.
     </motion.p>
     <motion.h3
       initial={{ opacity: 0, y: 10 }}
@@ -303,9 +303,8 @@ const SocialProof = () => (
       transition={{ delay: 0.1 }}
       className="text-xl sm:text-2xl lg:text-3xl font-medium tracking-tight max-w-4xl"
     >
-      Achieving an{" "}
-      <span className="text-brand-accent">80%+ Sim2Real Transfer Rate</span>—The
-      New Industry Standard.
+      Built for{" "}
+      <span className="text-brand-accent">8scalable Sim2Real transfer</span>in the world's most complex physical environments.
     </motion.h3>
   </section>
 );
