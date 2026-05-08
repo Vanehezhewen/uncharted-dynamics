@@ -448,7 +448,7 @@ const CaseStudies = () => (
       <div className="mb-16 flex flex-col items-center text-center">
         <h2 className="text-[2.5rem] sm:text-[3.5rem] leading-[0.95] font-medium tracking-[-0.03em] mb-4">
           Where the Physics Gets <br />
-          <span className="text-brand-orange">Complex</span>
+          <span className="text-brand-accent">Complex</span>
         </h2>
         <p className="text-lg opacity-70 max-w-xl">
           What becomes possible across robotic domains.
@@ -498,7 +498,8 @@ const BuildOnFirstPrinciples = () => (
     <div className="max-w-4xl mx-auto w-full">
       <div className="mb-16">
         <h2 className="text-[2.5rem] sm:text-[3.5rem] leading-[0.95] font-medium tracking-[-0.03em] mb-4">
-          Built on First Principles
+          Built on <br />
+          <span className="text-brand-orange">First Principles</span>
         </h2>
         <p className="text-lg opacity-60">
           Most simulation engines were designed for graphics. We weren't.
