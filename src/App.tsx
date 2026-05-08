@@ -259,9 +259,7 @@ const Hero = () => {
             }}
             className="font-montserrat font-normal text-lg leading-relaxed opacity-80 max-w-[70vw] md:max-w-[45vw]"
           >
-            Building a physics-first intelligence infrastructure that enables AI
-            to interact with the real world through unmatched fidelity and
-            computational scalability.
+            We believe intelligence is shaped by interaction with the physical world. Friction, contact, deformation, force — the countless dynamics that govern reality. To build machines that truly understand and operate in the real world, AI must learn physics not as approximation, but as first principle. We are building the infrastructure for that future.
           </motion.p>
 
           <motion.div
