@@ -537,17 +537,17 @@ const BuildOnFirstPrinciples = () => (
 const FinalCTA = () => (
   <section className="py-32 px-6 xl:px-[150px] bg-brand-accent text-white text-center flex flex-col items-center">
     <h2 className="text-[3rem] sm:text-[4.5rem] leading-[0.95] font-medium tracking-[-0.03em] mb-6">
-      Minimize the <br className="md:hidden" />
-      Sim2Real Gap Today.
+      The Engine <br className="md:hidden" />
+      Beneath the Engine.
     </h2>
     <p className="text-xl sm:text-2xl opacity-90 mb-12 max-w-2xl font-light">
-      Join the next-generation physical intelligence ecosystem.
+      Rigorous by design. Deployable by default.
     </p>
     <a
       href="#contact"
       className="py-5 px-10 text-brand-text text-[11px] font-bold tracking-[0.15em] uppercase bg-white hover:scale-105 transition-all rounded-full shadow-2xl flex items-center gap-4"
     >
-      Connect With Our Experts <ArrowRight className="w-5 h-5" />
+      Connect With Us <ArrowRight className="w-5 h-5" />
     </a>
   </section>
 );
