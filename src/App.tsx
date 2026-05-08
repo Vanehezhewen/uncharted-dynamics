@@ -491,54 +491,41 @@ const CaseStudies = () => (
 );
 
 
-const FAQ = () => (
+const BuildOnFirstPrinciples = () => (
   <section className="py-32 px-6 xl:px-[150px] bg-[#f5f5f7]">
     <div className="max-w-4xl mx-auto w-full">
-      <div className="mb-16 text-center">
+      <div className="mb-16">
         <h2 className="text-[2.5rem] sm:text-[3.5rem] leading-[0.95] font-medium tracking-[-0.03em] mb-4">
-          Frequently Asked Questions
+          Built on First Principles
         </h2>
+        <p className="text-lg opacity-60">
+          Most simulation engines were designed for graphics. We weren't.
+        </p>
       </div>
       <div className="space-y-4">
         {[
           {
-            q: "How does this differ from graphics-based engines like PhysX or MuJoCo?",
-            a: "While those prioritize speed, Uncharted Dynamics prioritizes physical accuracy in complex contact and deformation scenarios.",
+            title: "Why We Started From Scratch",
+            body: "Existing solvers make tradeoffs that work for rendering and games — speed over accuracy, approximation over consistency. For robotics, those tradeoffs compound. A policy trained on physically inconsistent data fails in the real world. We built from the ground up because patching existing engines couldn't close that gap.",
           },
           {
-            q: "What pricing models do you offer?",
-            a: "We provide usage-based pricing for Engine-as-a-Service and project-based pricing for custom simulation solutions.",
+            title: "The Tradeoffs We Made",
+            body: "We chose fidelity over speed where it matters — in contact resolution, deformation modeling, and friction computation. That means our solver is not the fastest, but it is the most physically consistent in the scenarios that break other engines. That's a deliberate choice, not a limitation.",
           },
           {
-            q: "Is your synthetic data physically labeled?",
-            a: "Yes, we provide accurate labels (<10% error) for contact forces, torques, and friction coefficients.",
+            title: "What It Unlocks",
+            body: "When the physics is right, everything downstream gets better. Training data carries real signal. Policies transfer. Evaluation results mean something. The solver isn't the end product — it's what makes the rest of the stack trustworthy.",
           },
-        ].map((faq, i) => (
-          <details
+        ].map((item, i) => (
+          <div
             key={i}
-            className="group p-6 sm:p-8 bg-white border border-brand-text/10 rounded-[2rem] cursor-pointer [&_summary::-webkit-details-marker]:hidden"
+            className="p-6 sm:p-8 bg-white border border-brand-text/10 rounded-[2rem]"
           >
-            <summary className="flex items-center justify-between font-medium text-lg outline-none">
-              {faq.q}
-              <span className="ml-4 flex-shrink-0 origin-center transition duration-300 group-open:-rotate-180 text-brand-accent">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </span>
-            </summary>
-            <p className="mt-6 opacity-70 leading-relaxed pl-4 border-l-2 border-brand-accent/30">
-              {faq.a}
+            <h3 className="font-medium text-lg mb-4">{item.title}</h3>
+            <p className="opacity-70 leading-relaxed pl-4 border-l-2 border-brand-accent/30">
+              {item.body}
             </p>
-          </details>
+          </div>
         ))}
       </div>
     </div>
