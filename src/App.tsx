@@ -411,27 +411,27 @@ const HowItWorks = () => (
           <span className="text-brand-orange">Works</span>
         </h2>
         <p className="text-lg sm:text-xl leading-relaxed opacity-80 italic max-w-lg mt-8">
-          The logic behind the industry's missing middle layer.
+          The infrastructure layer the industry has been missing.
         </p>
       </div>
 
       <div className="lg:w-7/12 flex flex-col gap-6 w-full relative z-10">
         <FeatureCard
           index="01"
-          title="Proprietary Hybrid Solver"
-          desc="Integrates hard-constrained physics with learnable modules for real-time, large-scale parallel simulation."
+          title="High-Fidelity Physics Solver"
+          desc="Models contact-rich, nonlinear dynamics with rigorous physical consistency — capturing the interactions that matter most."
           delay={0.1}
         />
         <FeatureCard
           index="02"
-          title="High-Fidelity Modeling"
-          desc="Supports rigid-soft coupling, MLCP-based friction, and multi-contact dynamics."
+          title="Synthetic Data Generation"
+          desc="Generates scalable, diverse training data grounded in first-principles physics, without sacrificing real-world fidelity."
           delay={0.2}
         />
         <FeatureCard
           index="03"
-          title="Seamless Integration"
-          desc="Compatible with Unity, Omniverse, and OpenUSD via Python/C++/ROS interfaces."
+          title="Simulation Evaluation Loop"
+          desc="Continuously benchmarks and refines behavior against physical ground truth, closing the gap between simulation and reality."
           delay={0.3}
         />
       </div>
