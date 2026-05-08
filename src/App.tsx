@@ -450,23 +450,23 @@ const CaseStudies = () => (
           Case Studies
         </h2>
         <p className="text-lg opacity-70 max-w-xl">
-          Proven results across diverse robotic domains.
+          What becomes possible across robotic domains.
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {[
           {
-            title: "Dexterous Hand Manufacturers",
-            desc: "Solved object slipping; increased grasp success from 60% to >85%.",
+            title: "Dexterous Hand Manipulation",
+            desc: "Handling deformable and soft objects — where contact geometry shifts mid-grasp and most simulators lose physical ground truth.",
           },
           {
             title: "Humanoid Robot Control",
-            desc: "Achieved torque consistency and dynamic balance with >90% policy transfer success.",
+            desc: "Torque consistency and dynamic balance, sim-to-real transfer that holds up outside controlled conditions.",
           },
           {
             title: "Cross-Terrain Operations",
-            desc: "Realistic soft-rigid response enabling robust navigation on slopes and soft ground.",
+            desc: "Soft-rigid terrain response that gives mobile robots reliable footing on slopes, loose ground, and mixed surfaces.",
           },
         ].map((study, i) => (
           <motion.div
