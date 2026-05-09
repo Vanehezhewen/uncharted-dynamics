@@ -166,7 +166,7 @@ const Nav = () => (
       <NavLink href="#ecosystem">Scope</NavLink>
       <NavLink href="#manifesto">Manifesto</NavLink>
       <a
-        href="#contact"
+        href="#connect"
         className="ml-4 text-[10px] uppercase font-bold tracking-[0.1em] px-4 py-2 border border-brand-text/20 rounded-full hover:bg-brand-text hover:text-white transition-colors"
       >
         Contact Us
@@ -537,7 +537,7 @@ const BuildOnFirstPrinciples = () => (
 
 
 const FinalCTA = () => (
-  <section className="py-32 px-6 xl:px-[150px] bg-brand-accent text-white text-center flex flex-col items-center">
+  <section id="connect" className="py-32 px-6 xl:px-[150px] bg-brand-accent text-white text-center flex flex-col items-center">
     <h2 className="text-[3rem] sm:text-[4.5rem] leading-[0.95] font-medium tracking-[-0.03em] mb-6">
       The Engine <br className="md:hidden" />
       Beneath the Engine.
@@ -552,6 +552,48 @@ const FinalCTA = () => (
       Connect With Us <ArrowRight className="w-5 h-5" />
     </a>
   </section>
+);
+
+const ContactForm = () => (
+  <div className="flex flex-col gap-4 text-sm max-w-md">
+    <span className="text-[10px] font-bold tracking-[0.15em] uppercase opacity-50">
+      Send us a message
+    </span>
+    <form
+      action="mailto:tech@uncharteddynamics.ai"
+      method="post"
+      encType="text/plain"
+      className="flex flex-col gap-4"
+    >
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        className="px-4 py-2 border border-brand-text/20 rounded-lg bg-white/50 backdrop-blur-sm focus:outline-none focus:border-brand-accent"
+        required
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        className="px-4 py-2 border border-brand-text/20 rounded-lg bg-white/50 backdrop-blur-sm focus:outline-none focus:border-brand-accent"
+        required
+      />
+      <textarea
+        name="message"
+        placeholder="Your Message"
+        rows={4}
+        className="px-4 py-2 border border-brand-text/20 rounded-lg bg-white/50 backdrop-blur-sm focus:outline-none focus:border-brand-accent resize-none"
+        required
+      />
+      <button
+        type="submit"
+        className="px-6 py-2 bg-brand-accent text-white text-[10px] font-bold tracking-[0.15em] uppercase rounded-full hover:bg-brand-accent/90 transition-colors"
+      >
+        Send Message
+      </button>
+    </form>
+  </div>
 );
 
 const Footer = () => (
@@ -576,12 +618,13 @@ const Footer = () => (
     </div>
 
     <div className="flex flex-col sm:flex-row gap-12 lg:gap-24">
+      <ContactForm />
       <div className="flex flex-col gap-4 text-sm">
         <span className="text-[10px] font-bold tracking-[0.15em] uppercase opacity-50">
           Contact Information
         </span>
         <a
-          href="mailto:info@uncharted-dynamics.com"
+          href="mailto:tech@uncharteddynamics.ai"
           className="hover:text-brand-accent transition-colors font-semibold"
         >
           tech@uncharteddynamics.ai
