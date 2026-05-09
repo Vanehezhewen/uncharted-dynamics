@@ -545,18 +545,13 @@ const FinalCTA = () => (
     <p className="text-xl sm:text-2xl opacity-90 mb-12 max-w-2xl font-light">
       Rigorous by design. Deployable by default.
     </p>
-    <a
-      href="#contact"
-      className="py-5 px-10 text-brand-text text-[11px] font-bold tracking-[0.15em] uppercase bg-white hover:scale-105 transition-all rounded-full shadow-2xl flex items-center gap-4"
-    >
-      Connect With Us <ArrowRight className="w-5 h-5" />
-    </a>
+    <ContactForm />
   </section>
 );
 
 const ContactForm = () => (
   <div className="flex flex-col gap-4 text-sm max-w-md">
-    <span className="text-[10px] font-bold tracking-[0.15em] uppercase opacity-50">
+    <span className="text-[10px] font-bold tracking-[0.15em] uppercase text-white/80">
       Send us a message
     </span>
     <form
@@ -569,26 +564,26 @@ const ContactForm = () => (
         type="text"
         name="name"
         placeholder="Your Name"
-        className="px-4 py-2 border border-brand-text/20 rounded-lg bg-white/50 backdrop-blur-sm focus:outline-none focus:border-brand-accent"
+        className="px-4 py-3 border border-white/30 rounded-lg bg-white/10 backdrop-blur-sm text-white placeholder-white/60 focus:outline-none focus:border-white/50"
         required
       />
       <input
         type="email"
         name="email"
         placeholder="Your Email"
-        className="px-4 py-2 border border-brand-text/20 rounded-lg bg-white/50 backdrop-blur-sm focus:outline-none focus:border-brand-accent"
+        className="px-4 py-3 border border-white/30 rounded-lg bg-white/10 backdrop-blur-sm text-white placeholder-white/60 focus:outline-none focus:border-white/50"
         required
       />
       <textarea
         name="message"
         placeholder="Your Message"
         rows={4}
-        className="px-4 py-2 border border-brand-text/20 rounded-lg bg-white/50 backdrop-blur-sm focus:outline-none focus:border-brand-accent resize-none"
+        className="px-4 py-3 border border-white/30 rounded-lg bg-white/10 backdrop-blur-sm text-white placeholder-white/60 focus:outline-none focus:border-white/50 resize-none"
         required
       />
       <button
         type="submit"
-        className="px-6 py-2 bg-brand-accent text-white text-[10px] font-bold tracking-[0.15em] uppercase rounded-full hover:bg-brand-accent/90 transition-colors"
+        className="px-6 py-3 bg-white text-brand-accent text-[10px] font-bold tracking-[0.15em] uppercase rounded-full hover:bg-white/90 transition-colors shadow-lg"
       >
         Send Message
       </button>
@@ -618,7 +613,6 @@ const Footer = () => (
     </div>
 
     <div className="flex flex-col sm:flex-row gap-12 lg:gap-24">
-      <ContactForm />
       <div className="flex flex-col gap-4 text-sm">
         <span className="text-[10px] font-bold tracking-[0.15em] uppercase opacity-50">
           Contact Information
