@@ -275,10 +275,10 @@ const Hero = () => {
             }}
             className="flex flex-col sm:flex-row items-center justify-start gap-4"
           >
-            <button className="w-full sm:w-auto py-4 px-8 text-white text-[10px] font-bold tracking-[0.15em] uppercase bg-brand-accent/90 backdrop-blur-md shadow-lg shadow-brand-accent/20 flex justify-between items-center gap-8 hover:bg-brand-accent hover:-translate-y-0.5 transition-all rounded-full">
+            <a href="#connect" className="w-full sm:w-auto py-4 px-8 text-white text-[10px] font-bold tracking-[0.15em] uppercase bg-brand-accent/90 backdrop-blur-md shadow-lg shadow-brand-accent/20 flex justify-between items-center gap-8 hover:bg-brand-accent hover:-translate-y-0.5 transition-all rounded-full">
               <span>Request a Demo</span>
               <span>&rarr;</span>
-            </button>
+            </a>
           </motion.div>
         </motion.div>
       </div>
