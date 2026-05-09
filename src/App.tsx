@@ -15,6 +15,7 @@ import {
   CheckCircle,
   Zap,
 } from "lucide-react";
+import emailjs from '@emailjs/browser';
 
 // Add StarBurst component
 const StarBurst: React.FC<{ x: number; y: number; onComplete: () => void }> = ({
@@ -549,47 +550,81 @@ const FinalCTA = () => (
   </section>
 );
 
-const ContactForm = () => (
-  <div className="flex flex-col gap-4 text-sm w-1/2">
-    <span className="text-[10px] font-bold tracking-[0.15em] uppercase text-white/80">
-      Connect with us
-    </span>
-    <form
-      action="mailto:tech@uncharteddynamics.ai"
-      method="post"
-      encType="text/plain"
-      className="flex flex-col gap-4 w-full"
-    >
-      <input
-        type="text"
-        name="name"
-        placeholder="Your Name"
-        className="px-4 py-3 border border-white/30 rounded-lg bg-white/10 backdrop-blur-sm text-white placeholder-white/60 focus:outline-none focus:border-white/50"
-        required
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Your Email"
-        className="px-4 py-3 border border-white/30 rounded-lg bg-white/10 backdrop-blur-sm text-white placeholder-white/60 focus:outline-none focus:border-white/50"
-        required
-      />
-      <textarea
-        name="message"
-        placeholder="Your Message"
-        rows={4}
-        className="px-4 py-3 border border-white/30 rounded-lg bg-white/10 backdrop-blur-sm text-white placeholder-white/60 focus:outline-none focus:border-white/50 resize-none"
-        required
-      />
-      <button
-        type="submit"
-        className="px-6 py-3 bg-white text-brand-accent text-[10px] font-bold tracking-[0.15em] uppercase rounded-full hover:bg-white/90 transition-colors shadow-lg"
+const ContactForm = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      await emailjs.sendForm(
+        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        formRef.current!,
+        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+      );
+      setSubmitStatus('success');
+      formRef.current?.reset();
+    } catch (error) {
+      setSubmitStatus('error');
+      console.error('Email send failed:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <div className="flex flex-col gap-4 text-sm w-1/2">
+      <span className="text-[10px] font-bold tracking-[0.15em] uppercase text-white/80">
+        Connect with us
+      </span>
+      <form
+        ref={formRef}
+        onSubmit={handleSubmit}
+        className="flex flex-col gap-4 w-full"
       >
-        Send Message
-      </button>
-    </form>
-  </div>
-);
+        <input
+          type="text"
+          name="user_name"
+          placeholder="Your Name"
+          className="px-4 py-3 border border-white/30 rounded-lg bg-white/10 backdrop-blur-sm text-white placeholder-white/60 focus:outline-none focus:border-white/50"
+          required
+        />
+        <input
+          type="email"
+          name="user_email"
+          placeholder="Your Email"
+          className="px-4 py-3 border border-white/30 rounded-lg bg-white/10 backdrop-blur-sm text-white placeholder-white/60 focus:outline-none focus:border-white/50"
+          required
+        />
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          rows={4}
+          className="px-4 py-3 border border-white/30 rounded-lg bg-white/10 backdrop-blur-sm text-white placeholder-white/60 focus:outline-none focus:border-white/50 resize-none"
+          required
+        />
+        <button
+          type="submit"
+          disabled={isSubmitting}
+          className="px-6 py-3 bg-white text-brand-accent text-[10px] font-bold tracking-[0.15em] uppercase rounded-full hover:bg-white/90 transition-colors shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          {isSubmitting ? 'Sending...' : 'Send Message'}
+        </button>
+        {submitStatus === 'success' && (
+          <p className="text-green-300 text-sm">Message sent successfully!</p>
+        )}
+        {submitStatus === 'error' && (
+          <p className="text-red-300 text-sm">Failed to send message. Please try again.</p>
+        )}
+      </form>
+    </div>
+  );
+};
 
 const Footer = () => (
   <footer
