@@ -562,10 +562,10 @@ const ContactForm = () => {
 
     try {
       await emailjs.sendForm(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        'service_fdwoj77', // Replace with your EmailJS service ID
+        'template_kj807j6', // Replace with your EmailJS template ID
         formRef.current!,
-        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+        'AckBm6xchxsuZHoMJ' // Replace with your EmailJS public key
       );
       setSubmitStatus('success');
       formRef.current?.reset();
