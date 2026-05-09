@@ -550,7 +550,7 @@ const FinalCTA = () => (
 );
 
 const ContactForm = () => (
-  <div className="flex flex-col gap-4 text-sm w-full">
+  <div className="flex flex-col gap-4 text-sm w-1/2">
     <span className="text-[10px] font-bold tracking-[0.15em] uppercase text-white/80">
       Connect with us
     </span>
