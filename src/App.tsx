@@ -550,7 +550,7 @@ const FinalCTA = () => (
 );
 
 const ContactForm = () => (
-  <div className="flex flex-col gap-4 text-sm max-w-2xl">
+  <div className="flex flex-col gap-4 text-sm w-full">
     <span className="text-[10px] font-bold tracking-[0.15em] uppercase text-white/80">
       Connect with us
     </span>
@@ -558,7 +558,7 @@ const ContactForm = () => (
       action="mailto:tech@uncharteddynamics.ai"
       method="post"
       encType="text/plain"
-      className="flex flex-col gap-4"
+      className="flex flex-col gap-4 w-full"
     >
       <input
         type="text"
