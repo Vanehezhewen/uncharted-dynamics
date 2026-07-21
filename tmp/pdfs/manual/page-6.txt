@@ -1,0 +1,38 @@
+0 4 · E X P L I C I T P H Y S I C S
+P A R T I I · T E C H N O L O G Y C O R E
+The Explicit Solver:
+Multibody Dynamics & Contact
+Rigid-body point contact is commodity — every engine does it. Our solver targets the regime where engines
+break down.
+Multibody core
+A generalized-coordinate multibody formulation with configurable joints, damping, friction, and motor drive.
+The solver is engineered for scale and responsiveness: sparse-matrix representations, multithreaded parallel
+solving with dynamic computation and cache reuse, warm-start solving, and adaptive time-stepping —
+sustaining real-time simulation at 100+ DoF in a single scenario.
+Contact and friction — where we compete
+R I G I D B O D Y
+Multibody motion. Point contact. One solved
+regime. Commodity — every engine does
+this.
+C O N T A C T - R I C H · S O F T B O D Y
+Where rigid-body engines fail — and where we compete.
+Dense, simultaneous contact — 500–1,000
+pairs
+●
+Full Coulomb friction — no soft-contact
+shortcuts
+●
+Large deformations and soft–rigid
+coupling
+●
+MLCP-based contact resolution — multi-contact solving with stable contact maintenance, supporting
+non-coordinated contacts across the scene.
+●
+Full friction-cone modeling — high-precision Coulomb friction including stick–slip transitions and
+irregular friction regimes, with adaptive dimensionality-reduction friction models for real-time embedding.
+●
+Self-calibrating friction coefficients — dynamic friction parameters refined against real-world
+measurement rather than hand-tuned per scene.
+●
+U N C H A R T E D D Y N A M I C S · P R O D U C T M A N U A L
+0 6

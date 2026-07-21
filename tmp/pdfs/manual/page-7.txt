@@ -1,0 +1,51 @@
+0 5 · E X P L I C I T P H Y S I C S
+P A R T I I · T E C H N O L O G Y C O R E
+Soft Bodies & Deformables
+The regime where most engines break down first. Our proprietary deformable-body formulation models
+deformation exactly, not approximately — and runs in real time.
+Conventional flexible-body methods describe motion as a large rigid reference motion plus a small elastic
+deformation measured against a moving frame. That works for stiff machinery — and breaks down, physically
+and numerically, once deformation is large. Our formulation removes the reference frame altogether: every
+node carries only absolute, vector-valued quantities in the global inertial frame. No Euler angles, no
+quaternions — no rotational parameters anywhere in the formulation. Three consequences follow:
+exactness for arbitrarily large rotation combined with large deformation; rigid-body motion reproducing
+exactly zero strain; and a constant mass matrix — quadratic-velocity (Coriolis/centrifugal) inertia terms vanish
+identically.
+Conventional flexible-body methods
+Our formulation
+Nodal coordinates
+Frame translation/rotation + small
+elastic deformation
+Absolute positions + gradients; no rotational
+parameters
+Mass matrix
+Nonlinear, configuration-dependent
+Constant — inertia coupling terms vanish
+Large deformation
+Valid only for small elastic deformation
+Exact for arbitrary rotation + deformation
+Best suited for
+Rigid-dominated machinery, mild
+flexibility
+Cables, soft/continuum structures, contact-
+rich large deformation
+Our contribution — real-time integration for stiff deformables
+The classical bottleneck of high-fidelity deformables is stiff real-time integration. Our first-order scheme splits
+the elastic potential at the numerical quadrature points and treats each contribution as a relaxed compliant
+constraint:
+Rigid–soft coupling. Rigid and flexible bodies share the same global-coordinate language, so joints, contacts,
+and constraints between them are formulated systematically — not as special cases. GPU-native and
+differentiable.
+Deformation and soft–rigid coupling — where we compete, and where most engines cannot
+follow.
+Single linear solve per step — no nonlinear iteration
+✓
+Stable at time steps far larger than comparable first-order integrators
+✓
+Stable across orders of magnitude of stiffness with zero manual tuning — all integrator parameters derive
+from the element formulation
+✓
+Validated against quasi-static benchmarks with known analytical solutions
+✓
+U N C H A R T E D D Y N A M I C S · P R O D U C T M A N U A L
+0 7

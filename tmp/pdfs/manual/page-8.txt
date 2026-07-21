@@ -1,0 +1,43 @@
+0 6 · R E S I D U A L P H Y S I C S
+P A R T I I · T E C H N O L O G Y C O R E
+Modeling the Gap
+Universal laws are solved and shared. What remains — instance-specific variance — is small, structured, and
+generative.
+1
+MEASURE
+Capture real-world noise, oscillations, and residual forces in deployment — from your
+hardware, in your task.
+2
+MODEL
+Learn the structure of the gap: deterministic, parametric, and stochastic components — not a
+monolithic correction net.
+3
+GENERATE
+Synthesize realistic noise and oscillation profiles — statistically faithful profiles, not just averages.
+4
+RECONSTRUCT
+Reproduce real-world scenarios for training, validation, and stress testing — including the rare
+events that never recur on demand in the lab.
+Hours,
+not weeks
+to retarget a residual model to
+new hardware — no full re-
+collection of real-world data.
+$0
+marginal cost
+synthetic residual data
+generated on demand,
+statistically consistent with
+logged noise.
+Edge cases
+reconstructed
+rare events rebuilt from
+structure — not interpolated
+from what happened to be
+recorded.
+The residual never touches the solver. It activates in a separate parameter space, coupled through a single
+layer scaled by deployment context. The physics is never overwritten — only the gap is learned. This is what
+keeps every failure attributable by module (§03).
+The residual is modeled precisely enough to recreate the real world.
+U N C H A R T E D D Y N A M I C S · P R O D U C T M A N U A L
+0 8

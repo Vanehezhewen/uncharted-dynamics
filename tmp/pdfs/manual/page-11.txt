@@ -1,0 +1,36 @@
+0 9 · D A T A S P E C I F I C A T I O N
+P A R T I I I · W O R K I N G W I T H U S
+The Data Specification
+Every label is computed by the solver — ground truth by construction, not sensor estimation.
+L A B E L T A X O N O M Y
+Category
+Labels
+Force & torque
+Contact forces, normal forces, joint torques, pressure fields
+Contact dynamics
+Sliding, stick–slip transitions, contact-mode changes
+Deformation
+Soft-body deformation states, soft–rigid coupling responses
+C O N T A C T E V E N T C O V E R A G E
+M A N I P U L A T I O N
+Point · surface · rolling · sliding · stick–slip
+contact events, dense and customizable per
+scenario.
+L O C O M O T I O N
+Single-foot support · foot slip · ground impact,
+across terrain and compliance regimes.
+G E N E R A T I O N P R O P E R T I E S
+D E L I V E R Y
+Dataset format and schema are agreed per engagement. Available as standard vertical task packages
+(manipulation, locomotion) or fully custom scenario suites — directly usable for training policies or base
+models.
+Large-scale parallel synthesis — scenario generation parallelized across the solver infrastructure.
+●
+Adaptive sampling — generation concentrated on rare, failure-relevant events rather than uniform
+coverage of easy states.
+●
+Traceability — every sample traces to a solver configuration and scenario seed; datasets are reproducible
+assets, not one-off exports.
+●
+U N C H A R T E D D Y N A M I C S · P R O D U C T M A N U A L
+1 1

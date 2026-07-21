@@ -163,7 +163,8 @@ const Nav = () => (
       </div>
     </a>
     <div className="hidden md:flex items-center gap-10 lg:gap-16">
-      <NavLink href="#technology">Products</NavLink>
+      <NavLink href="#products">Products</NavLink>
+      <NavLink href="#technology">Technology</NavLink>
       <NavLink href="#ecosystem">Scope</NavLink>
       <NavLink href="#manifesto">Manifesto</NavLink>
       <a
@@ -363,6 +364,133 @@ const CoreBenefits = () => (
         desc="Less time re-tuning. Less spent on manual data collection."
         delay={0.3}
       />
+    </div>
+  </section>
+);
+
+const productOfferings = [
+  {
+    number: "01",
+    eyebrow: "Physics Core",
+    title: "A Decomposed World Model",
+    description:
+      "A causally separable architecture that solves universal physics first, then learns only the small, instance-specific gap.",
+    points: [
+      "Explicit physics: contact mechanics, conservation laws, and deformable dynamics",
+      "Residual physics: material variance, actuator backlash, and manufacturing tolerance",
+      "Closed-loop diagnostics that attribute every deployment error to its source layer",
+    ],
+    accent: "green",
+  },
+  {
+    number: "02",
+    eyebrow: "Explicit Solver",
+    title: "Contact-Rich Multibody & Deformable Dynamics",
+    description:
+      "A real-time solver built for the regimes where conventional engines break down: dense contact, full friction, and large deformation.",
+    points: [
+      "Real-time simulation at 100+ DoF with sparse, parallel solving",
+      "500–1,000 simultaneous contact pairs with full Coulomb friction",
+      "Exact large-deformation soft bodies and systematic rigid–soft coupling",
+    ],
+    accent: "green",
+  },
+  {
+    number: "03",
+    eyebrow: "Residual Physics",
+    title: "Modeling the Gap",
+    description:
+      "A separate residual model captures the deterministic, parametric, and stochastic effects that equations cannot predict.",
+    points: [
+      "Measure deployment noise, oscillations, and residual forces",
+      "Generate statistically faithful profiles at zero marginal data cost",
+      "Reconstruct rare edge cases for training, validation, and stress testing",
+    ],
+    accent: "orange",
+  },
+  {
+    number: "04",
+    eyebrow: "Data Products",
+    title: "Solver-Labeled Training Data",
+    description:
+      "Reproducible datasets with ground-truth labels computed by the solver—not inferred from noisy sensors.",
+    points: [
+      "Force, torque, pressure, contact-mode, and deformation labels",
+      "Manipulation and locomotion packages, or fully custom scenario suites",
+      "Parallel synthesis, adaptive rare-event sampling, and seed-level traceability",
+    ],
+    accent: "green",
+  },
+];
+
+const Products = () => (
+  <section
+    id="products"
+    className="py-32 px-6 xl:px-[150px] bg-brand-bg/65 text-brand-text relative overflow-hidden scroll-mt-16 border-b border-brand-text/15"
+  >
+    <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-brand-accent/5 pointer-events-none" />
+    <div className="relative z-10 max-w-7xl mx-auto">
+      <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10 mb-20">
+        <div>
+          <span className="text-[10px] font-bold tracking-[0.24em] uppercase text-brand-accent">
+            Products · What We Offer
+          </span>
+          <h2 className="text-[3rem] sm:text-[4.5rem] leading-[0.95] font-medium tracking-[-0.04em] mt-5">
+            Physics infrastructure,
+            <br />
+            <span className="text-brand-orange">from model to data.</span>
+          </h2>
+        </div>
+        <p className="text-lg leading-relaxed text-brand-text/70 max-w-xl">
+          One integrated stack for physical intelligence: solve what is known,
+          learn what remains, and generate traceable training data at scale.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-brand-text/10 border border-brand-text/10 rounded-[2rem] overflow-hidden shadow-sm">
+        {productOfferings.map((product, i) => (
+          <motion.article
+            key={product.number}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.65, delay: i * 0.08 }}
+            className="bg-white p-8 sm:p-12 group"
+          >
+            <div className="flex items-center justify-between mb-10">
+              <span className={`text-[10px] font-bold tracking-[0.2em] uppercase ${product.accent === "orange" ? "text-brand-orange" : "text-brand-accent"}`}>
+                {product.eyebrow}
+              </span>
+              <span className="text-xs font-medium text-brand-text/35">{product.number}</span>
+            </div>
+            <h3 className="text-2xl sm:text-3xl font-medium tracking-[-0.02em] leading-tight mb-5">
+              {product.title}
+            </h3>
+            <p className="text-brand-text/65 leading-relaxed mb-8">{product.description}</p>
+            <ul className="space-y-4">
+              {product.points.map((point) => (
+                <li key={point} className="flex gap-3 text-sm leading-relaxed text-brand-text/75">
+                  <span className={`mt-2 w-1.5 h-1.5 rounded-full shrink-0 ${product.accent === "orange" ? "bg-brand-orange" : "bg-brand-accent"}`} />
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          </motion.article>
+        ))}
+      </div>
+
+      <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
+        {[
+          ["~85%", "Explicit, solvable physics"],
+          ["~15%", "Bounded, learnable residual"],
+          ["Ground truth", "Labels by construction"],
+        ].map(([value, label]) => (
+          <div key={label} className="rounded-2xl border border-brand-text/10 p-6 bg-white shadow-sm">
+            <div className="text-2xl font-medium mb-2">{value}</div>
+            <div className="text-[10px] tracking-[0.16em] uppercase text-brand-text/50">{label}</div>
+          </div>
+        ))}
+      </div>
     </div>
   </section>
 );
@@ -689,6 +817,7 @@ export default function App() {
         <Hero />
         <SocialProof />
         <CoreBenefits />
+        <Products />
         <HowItWorks />
         <CaseStudies />
         <BuildOnFirstPrinciples/>

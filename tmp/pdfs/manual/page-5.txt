@@ -1,0 +1,49 @@
+0 3 · T H E A R C H I T E C T U R E
+P A R T I I · T E C H N O L O G Y C O R E
+A Decomposed World Model
+Explicit and residual physics are causally separable — so every deployment error is attributable, and the loop
+closes itself.
+E X P L I C I T P H Y S I C S · ~ 8 5 %
+Solvable — not learnable. Shared across
+every client and task; predictions ready before
+any sensor data arrives.
+R E S I D U A L P H Y S I C S · ~ 1 5 %
+Small, bounded, learnable. The only learned
+term, isolated in its own parameter space —
+the solver is never retrained or overwritten.
+S.
+SOLVE FIRST
+Two centuries of physics equations — applied exactly.
+L.
+LEARN THE GAP
+Only what equations cannot predict: small, bounded, instance-specific variance.
+C.
+COMPOSE
+One unified prediction. Every failure is diagnosable to its origin layer.
+I N P U T → S O LV E + L E A R N → O U T P U T
+Input
+State q (mm) · Forces F (N)
+Explicit layer
+Fcontact — white-box: every term causal and inspectable, solved not learned
+Residual layer
+δF — oscillation, drift, unmodeled dynamics; the only learned, opaque term — isolated
+here
+Output
+Position (mm), force (N) — physically interpretable, not a latent vector
+Closed-loop diagnostics, after deployment. Deploy → observe error → attribute to solver or residual →
+correct that layer only. Retrain only the implicated layer and redeploy — without retraining the whole model.
+Physics doesn't just predict — it explains. That is what makes the loop closable.
+Contact mechanics
+●
+Conservation laws
+●
+Deformable dynamics
+●
+Material variance
+●
+Actuator backlash
+●
+Manufacturing tolerance
+●
+U N C H A R T E D D Y N A M I C S · P R O D U C T M A N U A L
+0 5
